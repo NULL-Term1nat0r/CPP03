@@ -6,11 +6,12 @@
 /*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 08:44:39 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/08 18:02:23 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/09/11 16:54:57 by estruckm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
 ClapTrap::ClapTrap() : _name("Julie"), _hitPoints(10), _energyPoints(10), _damagePoints(5){
 	printColour("default constructor from parent  called", blue);
 	printColour(" for ", blue);
@@ -26,27 +27,27 @@ ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _ener
 
 ClapTrap::~ClapTrap(){
 	printColour("deconstructor from parent called\n", red);
-
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other){
+
+	*this = other;
 	printColour("copy constructor from parent called", cyan);
 	printColour(" for ", cyan);
 	printColour(other._name, cyan);
 	std::cout << "\n";
-
-	*this = other;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &other){
-	printColour("copy asignment constructor from parent called", yellow);
-	printColour(" for ", yellow);
-	printColour(other._name, yellow);
-	std::cout << "\n";
+
 	setHitPoints(other.getHitPoints());
 	setEnergyPoints(other.getEnergyPoints());
 	setDamagePoints(other.getDamagePoints());
 	setName(other.getName());
+	printColour("copy asignment constructor from parent called", yellow);
+	printColour(" for ", yellow);
+	printColour(other._name, yellow);
+	std::cout << "\n";
 	return *this;
 }
 

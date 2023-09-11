@@ -12,6 +12,13 @@
 #define reset "\033[0m"
 
 
+# define RED "\033[1;31m"
+# define PUR "\033[1;35m"
+# define YEL "\033[1;33m"
+# define GRE "\033[1;32m"
+# define BLU "\033[1;34m"
+# define RES "\033[0m"
+
 
 
 class ClapTrap{

@@ -6,7 +6,7 @@
 /*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:31:31 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/08 22:28:02 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/09/11 14:38:16 by estruckm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ int main() {
   // claptrap.getDataFromPlayer();
   // fragtrap.getDataFromPlayer();
   // claptrap.getDataFromPlayer();
-  diamondtrap.getDataFromPlayer2();
+  // std::cout << "name: " << diamondtrap.getDiamondName() << std::endl;
+		std::cout << "Attack:" << diamondtrap.getDamagePoints() << std::endl;
+		std::cout << "Hit: " << diamondtrap.getHitPoints() << std::endl;
+		std::cout << "Energy: " << diamondtrap.getEnergyPoints() << std::endl;
+		std::cout << "Clap name: " << diamondtrap.getName() << std::endl;
+  // diamondtrap.getDataFromPlayer2();
   // fragtrap.getDataFromPlayer();
   // scavtrap.getDataFromPlayer();
   // diamond1.getDataFromPlayer2();

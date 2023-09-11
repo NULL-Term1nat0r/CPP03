@@ -6,41 +6,28 @@
 /*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 13:20:48 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/08 22:31:45 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/09/11 17:01:46 by estruckm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-	// public:
-	// 	FragTrap(const std::string &name);
-	// 	~FragTrap();
-
-	// 	void highFives(void);
-	// 	void attack(const std::string &target);
 FragTrap::FragTrap() : ClapTrap(){
 	printColour("FragTrap default constructor called", blue);
 	printColour(" for ", blue);
-	// printColour(getName(), blue);
 	this->_energyPoints = 100;
 	this->_hitPoints = 100;
 	this->_damagePoints = 30;
 	std::cout << "fragtrap damage: " << FragTrap::_damagePoints << std::endl;
-	// setHitPoints(100);
-	// setDamagePoints(30);
 	std::cout << "\n";
 }
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name){
 	printColour("FragTrap constructor called", blue);
 	printColour(" for ", blue);
-	// printColour(getName(), blue);
 	this->_name = name;
 	this->_energyPoints = 100;
 	this->_hitPoints = 100;
 	this->_damagePoints = 30;
-	std::cout << "fragtrap damage: " << FragTrap::_damagePoints << std::endl;
-	// setHitPoints(100);
-	// setDamagePoints(30);
 	std::cout << "\n";
 }
 
@@ -79,6 +66,10 @@ void FragTrap::highFivesGuys(){
 		std::cout << "FragTrap " << getName() << " requets a high five\n";
 		setEnergyPoints(getEnergyPoints() - 1);
 	}
+}
+
+unsigned int FragTrap::getFragDamage(){
+	return this->_damagePoints;
 }
 
 

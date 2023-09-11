@@ -6,7 +6,7 @@
 /*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 13:18:33 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/08 21:48:19 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/09/11 16:27:06 by estruckm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class FragTrap : virtual public ClapTrap{
 		FragTrap(const FragTrap &copy);
 		FragTrap &operator=(const FragTrap &src);
 		~FragTrap();
+
+		unsigned int getFragDamage();
 
 		void highFivesGuys(void);
 };

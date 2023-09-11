@@ -6,7 +6,7 @@
 #    By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/08 08:36:21 by estruckm          #+#    #+#              #
-#    Updated: 2023/09/08 18:46:18 by estruckm         ###   ########.fr        #
+#    Updated: 2023/09/11 14:43:37 by estruckm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS		:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJS		:= $(SRCS:.cpp=.o)
 
-CFLAGS		:= -Wall -Werror -Wextra -std=c++98 -Wno-shadow -fsanitize=address
+CFLAGS		:= -Wall -Werror -Wextra -std=c++98
 
 CC			:= c++
 

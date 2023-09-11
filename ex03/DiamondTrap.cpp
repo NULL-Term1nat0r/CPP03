@@ -1,50 +1,50 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 14:53:35 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/08 23:28:24 by estruckm         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+// /* ************************************************************************** */
+// /*                                                                            */
+// /*                                                        :::      ::::::::   */
+// /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
+// /*                                                    +:+ +:+         +:+     */
+// /*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
+// /*                                                +#+#+#+#+#+   +#+           */
+// /*   Created: 2023/09/08 14:53:35 by estruckm          #+#    #+#             */
+// /*   Updated: 2023/09/11 13:44:42 by estruckm         ###   ########.fr       */
+// /*                                                                            */
+// /* ************************************************************************** */
+
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : _name("default_clap_trap"){
+DiamondTrap::DiamondTrap(){
 
 	this->_name= "default_diamond";
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = 50;
-
-	// this->_energyPoints = ScavTrap::_energyPoints;
-	this->_damagePoints = FragTrap::_damagePoints;
-	std::cout << "fragtrap damage: " << FragTrap::_damagePoints << std::endl;
+	this->_hitPoints = this->FragTrap::_hitPoints;
+	this->_energyPoints = this->ScavTrap::_energyPoints;
+	this->_damagePoints = this->FragTrap::_damagePoints;
 
 	printColour("DiamondTrap default constructor called", blue);
 	printColour(" for ", blue);
 	printColour(_name ,blue);
 	std::cout << "\n";
 }
-// DiamondTrap::DiamondTrap(const std::string name) :  ClapTrap(name + "_clap_trap"),  ScavTrap(), FragTrap(){
-DiamondTrap::DiamondTrap(const std::string name){
 
+DiamondTrap::DiamondTrap(const std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name){
+
+	// ClapTrap::setName(name + "_clap_name");
 	this->_name = name;
-	this->_hitPoints = this->FragTrap::_hitPoints;
+	// this->_hitPoints = this->FragTrap::_hitPoints;
 	// this->_energyPoints = this->ScavTrap::_energyPoints;
+	// this->_damagePoints = this->FragTrap::_damagePoints;
+	this->_hitPoints = ClapTrap::_hitPoints;
+this->_energyPoints = ClapTrap::_energyPoints;
+this->_damagePoints = ClapTrap::_damagePoints;
+ClapTrap::setName(name + "_clap_name");
 
-	this->_damagePoints = this->FragTrap::_damagePoints;
-	std::cout << "fragtrap damage: " << FragTrap::_damagePoints << std::endl;
-
-
-	printColour("DiamondTrap constructor called", blue);
-	printColour(" for ", blue);
-	printColour(this->_name, blue);
-	std::cout << "\n";
+	// printColour("DiamondTrap constructor called", blue);
+	// printColour(" for ", blue);
+	// printColour(this->_name, blue);
+	// std::cout << "\n";
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy) :  ClapTrap(copy), ScavTrap(copy), FragTrap(copy){
+DiamondTrap::DiamondTrap(const DiamondTrap &copy) :  ClapTrap(copy), FragTrap(copy), ScavTrap(copy){
 	*this = copy;
 	std::cout << "DiamondTrap Copy Constructor called\n";
 }
@@ -73,8 +73,8 @@ void DiamondTrap::whoAmI(void){
 
 void DiamondTrap::getDataFromPlayer2(){
 	std::cout << "PlayerData:\n";
-	std::cout << "name: " << DiamondTrap::_name << std::endl;
-	std::cout << "hitPoints: " << DiamondTrap::_hitPoints << std::endl;
-	std::cout << "damagePoints: " << DiamondTrap::_damagePoints << std::endl;
-	std::cout << "energyPoints: " << DiamondTrap::_energyPoints << std::endl;
+	std::cout << "name: " << _name << std::endl;
+	std::cout << "hitPoints: " << DiamondTrap::getHitPoints() << std::endl;
+	std::cout << "damagePoints: " << DiamondTrap::getDamagePoints() << std::endl;
+	std::cout << "energyPoints: " << DiamondTrap::getEnergyPoints() << std::endl;
 }
