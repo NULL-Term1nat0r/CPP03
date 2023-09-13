@@ -6,7 +6,7 @@
 /*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 08:44:39 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/11 16:54:57 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:44:28 by estruckm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,19 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &other){
 }
 
 unsigned int ClapTrap::getHitPoints() const{
-	return this->_hitPoints;
+	return (this->_hitPoints);
 }
 
 unsigned int ClapTrap::getEnergyPoints() const{
-	return this->_energyPoints;
+	return (this->_energyPoints);
 }
 
 unsigned int ClapTrap::getDamagePoints() const{
-	return this->_damagePoints;
+	return (this->_damagePoints);
 }
 
 std::string ClapTrap::getName() const{
-	return this->_name;
+	return (this->_name);
 }
 //----------
 
