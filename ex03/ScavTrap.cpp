@@ -6,7 +6,7 @@
 /*   By: valmpani <valmpanis@student.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:50:50 by estruckm          #+#    #+#             */
-/*   Updated: 2023/10/26 16:29:10 by valmpani         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:32:01 by valmpani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void ScavTrap::attack(const std::string &target){
 		setEnergyPoints(this->ClapTrap::getEnergyPoints() - 1);
 	}
 }
+
 
 
 unsigned int ScavTrap::getScavEnergy(){
