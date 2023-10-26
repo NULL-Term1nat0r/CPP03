@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valmpani <valmpanis@student.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:55:12 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/08 23:21:28 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:27:10 by valmpani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ class ScavTrap : virtual public ClapTrap{
 
 		void guardGate(void);
 		void attack(const std::string &target);
-
+		unsigned int getEnergyPoints();
 	protected:
-		unsigned int getEnergy();
 		unsigned int getScavEnergy();
+		unsigned int _energyPoints;
 };
 
 #endif

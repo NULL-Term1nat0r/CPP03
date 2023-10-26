@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estruckm <estruckm@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valmpani <valmpanis@student.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:50:50 by estruckm          #+#    #+#             */
-/*   Updated: 2023/09/11 13:38:59 by estruckm         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:29:10 by valmpani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void ScavTrap::guardGate(void){
 }
 
 void ScavTrap::attack(const std::string &target){
-	if (getEnergyPoints() <= 0){
+	if (this->ClapTrap::getEnergyPoints() <= 0){
 		std::cout << "ScavTrap " << getName() << " doest not have enough energyPoints to perform anny attacks\n";
 		return;
 	}
@@ -79,7 +79,7 @@ void ScavTrap::attack(const std::string &target){
 	}
 	else{
 		std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing " << getDamagePoints() << " points of damage\n";
-		setEnergyPoints(getEnergyPoints() - 1);
+		setEnergyPoints(this->ClapTrap::getEnergyPoints() - 1);
 	}
 }
 
@@ -89,9 +89,8 @@ unsigned int ScavTrap::getScavEnergy(){
 
 }
 
-unsigned int ScavTrap::getEnergy(){
-	return this->_energyPoints;
-
+unsigned int ScavTrap::getEnergyPoints() {
+	return _energyPoints;
 }
 
 
