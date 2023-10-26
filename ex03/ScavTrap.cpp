@@ -22,14 +22,10 @@ ScavTrap::ScavTrap() : ClapTrap(){
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name){
 	printColour("ScavTrap constructor called", blue);
 	printColour(" for \n", blue);
-	// printColour(getName(), blue);
 	this->_name = name;
 	this->_energyPoints = 50;
 	this->_hitPoints = 100;
 	this->_damagePoints = 20;
-	// setEnergyPoints(50);
-	// setHitPoints(100);
-	// setDamagePoints(20);
 	std::cout << "energypoints: \n" << _energyPoints << std::endl;
 }
 
@@ -89,9 +85,8 @@ unsigned int ScavTrap::getScavEnergy(){
 
 }
 
-unsigned int ScavTrap::getEnergy(){
+unsigned int ScavTrap::getEnergyPoints() const {
 	return this->_energyPoints;
-
 }
 
 

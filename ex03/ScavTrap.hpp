@@ -28,10 +28,10 @@ class ScavTrap : virtual public ClapTrap{
 
 		void guardGate(void);
 		void attack(const std::string &target);
-
-	protected:
-		unsigned int getEnergy();
+		unsigned int getEnergyPoints() const;
 		unsigned int getScavEnergy();
+	protected:
+		unsigned int _energyPoints;
 };
 
 #endif
